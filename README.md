@@ -38,3 +38,4 @@ Keep the module paths relative (`./main.js`, `./style.css`, `./config.js`, and `
 ## Deployment
 
 The site is compatible with GitHub Pages. Publish the repository root (or configure Pages to publish the directory containing `index.html`); all required files are static assets.
+<!-- Refresh GitHub Pages deployment -->
