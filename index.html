@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Hannah Jasmine Saguinsin, BSIT student and aspiring developer.">
+  <title>Hannah Jasmine Saguinsin — Developer Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090810'/%3E%3Cpath d='M32 6 57 20v24L32 58 7 44V20Z' stroke='%238b5cf6' fill='none' stroke-width='3'/%3E%3Cpath d='M22 43V21l20 22V21' stroke='%23f472b6' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Return to portfolio overview">
+      <img class="brand-mark" src="./profile.png" alt="" width="38" height="38">
+      <span>Hannah <b class="accent">Saguinsin</b><small>DEVELOPER / PORTFOLIO</small></span>
+    </a>
+    <div class="top-controls">
+      <span class="status"><i></i><span id="renderer-status">INITIALIZING</span></span>
+      <button id="reset" type="button" title="Reset scene">RESET</button>
+      <button id="motion" type="button" aria-pressed="false">MOTION <span>on</span></button>
+      <button id="quality" type="button" aria-pressed="false">QUALITY <span>high</span></button>
+      <button id="sound" type="button" aria-pressed="false" hidden>SOUND <span>off</span></button>
+    </div>
+  </header>
+
+  <main id="main" class="layout">
+    <section class="intro-panel">
+      <div id="home" class="screen">
+        <p class="eyebrow">BSIT <span>/</span> STUDENT</p>
+        <h1 id="name">Hannah Jasmine <em>Saguinsin.</em></h1>
+        <p id="title" class="role"></p>
+        <p id="tagline" class="tagline"></p>
+        <button id="explore" class="primary" type="button"><span>EXPLORE NETWORK</span><span aria-hidden="true">→</span></button>
+        <div class="hero-meta">PHILIPPINES<br>AVAILABLE FOR COLLABORATION</div>
+      </div>
+
+      <article id="panel" class="screen" hidden>
+        <button id="close" class="back" type="button" aria-label="Back to overview">← BACK TO OVERVIEW</button>
+        <p id="module" class="eyebrow"></p>
+        <h2 id="heading" tabindex="-1"></h2>
+        <p id="description"></p>
+        <div id="content"></div>
+      </article>
+      <div class="side-bottom"><span>SCROLL / EXPLORE</span><span>© 2026</span></div>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="Interactive portfolio gallery">
+      <div class="scene-top">
+        <div><p class="eyebrow">DIGITAL <span>/</span> ARTIFACTS</p><div id="scene-title">Artifact gallery</div></div>
+        <select id="renderer" aria-label="Gallery renderer" disabled>
+          <option value="auto">Auto</option>
+          <option value="webgl">WebGL</option>
+          <option value="canvas">Canvas 3D</option>
+        </select>
+      </div>
+      <canvas id="world" tabindex="0" aria-label="Interactive 3D artifact scene"></canvas>
+      <div id="labels" class="labels"></div>
+      <div id="fallback" class="fallback" hidden>
+        <div class="fallback-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <p>Interactive 3D rendering is unavailable.</p>
+      </div>
+      <div class="scene-bottom">
+        <span id="hint">DRAG TO ROTATE · CLICK TO OPEN</span>
+        <div id="renderer-info" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dock">
+    <div class="dock-caption"><span>DESTINATION MODULES</span><span>01 — 05 / COLLECTION</span></div>
+    <nav id="module-nav" aria-label="Portfolio sections"></nav>
+    <div class="footnote"><span>© 2026 Hannah Jasmine Saguinsin</span><span>PORTFOLIO SYSTEM / 1.0</span></div>
+  </footer>
+
+  <dialog id="intro" aria-labelledby="intro-title">
+    <div class="intro-card">
+      <p class="eyebrow">WELCOME <span>/</span> SIGNAL</p>
+      <h2 id="intro-title">Portfolio network initialized.</h2>
+      <p>Explore the modules to learn about my identity, skills, projects and ways to connect.</p>
+      <button id="enter" class="primary" type="button"><span>ENTER PORTFOLIO</span><span aria-hidden="true">→</span></button>
+    </div>
+  </dialog>
+
+  <script type="module" src="./main.js" onerror="document.getElementById('renderer-info').textContent = 'Gallery scripts could not load. Serve this folder over HTTP and check that main.js and config.js are available.'"></script>
+</body>
+</html>
